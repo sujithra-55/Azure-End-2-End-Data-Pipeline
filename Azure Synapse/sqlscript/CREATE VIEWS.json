@@ -1,0 +1,17 @@
+{
+	"name": "CREATE VIEWS",
+	"properties": {
+		"content": {
+			"query": "--CREATE VIEW CALENDAR\n\nCREATE VIEW gold.calendar\nAS\nSELECT\n*\nFROM\nOPENROWSET\n(\n    BULK 'abfss://silver@datalakeazureproject.dfs.core.windows.net/AdventureWorks_Calendar/',\n    FORMAT = 'PARQUET'\n)as QUERYY1;\n\n--CREATE VIEW CUSTOMERS\n\nCREATE VIEW gold.Customers\nAS\nSELECT\n*\nFROM\nOPENROWSET\n(\n    BULK 'abfss://silver@datalakeazureproject.dfs.core.windows.net/AdventureWorks_Customers/',\n    FORMAT = 'PARQUET'\n)as QUERYY1;\n\n--CREATE VIEW PRODUCT_CATEGORIES\n\nCREATE VIEW gold.Product_Categories\nAS\nSELECT\n*\nFROM\nOPENROWSET\n(\n    BULK 'abfss://silver@datalakeazureproject.dfs.core.windows.net/AdventureWorks_Product_Categories/',\n    FORMAT = 'PARQUET'\n)as QUERYY1;\n\n--CREATE VIEW PRODUCT_SUBCATEGORIES\n\nCREATE VIEW gold.Product_Subcategories\nAS\nSELECT\n*\nFROM\nOPENROWSET\n(\n    BULK 'abfss://silver@datalakeazureproject.dfs.core.windows.net/Product_Subcategories/',\n    FORMAT = 'PARQUET'\n)as QUERYY1;\n\n--CREATE VIEW Products\n\nCREATE VIEW gold.Products\nAS\nSELECT\n*\nFROM\nOPENROWSET\n(\n    BULK 'abfss://silver@datalakeazureproject.dfs.core.windows.net/AdventureWorks_Products/',\n    FORMAT = 'PARQUET'\n)as QUERYY1;\n\n--CREATE VIEW Returns\n\nCREATE VIEW gold.returns\nAS\nSELECT\n*\nFROM\nOPENROWSET\n(\n    BULK 'abfss://silver@datalakeazureproject.dfs.core.windows.net/AdventureWorks_Returns/',\n    FORMAT = 'PARQUET'\n)as QUERYY1;\n\n--CREATE VIEW Sales_2015\n\nCREATE VIEW gold.Sales_2015\nAS\nSELECT\n*\nFROM\nOPENROWSET\n(\n    BULK 'abfss://silver@datalakeazureproject.dfs.core.windows.net/AdventureWorks_Sales_2015/',\n    FORMAT = 'PARQUET'\n)as QUERYY1;\n\n--CREATE VIEW Territories\n\nCREATE VIEW gold.Territories\nAS\nSELECT\n*\nFROM\nOPENROWSET\n(\n    BULK 'abfss://silver@datalakeazureproject.dfs.core.windows.net/AdventureWorks_Territories/',\n    FORMAT = 'PARQUET'\n)as QUERYY1;",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "azureprojectDB",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"name": "CREATE EXTERNAL TABLE extsales",
+	"properties": {
+		"content": {
+			"query": "CREATE EXTERNAL TABLE gold.extsales\nWITH\n(\n    LOCATION = 'extsales',\n    DATA_SOURCE = source_gold,\n    FILE_FORMAT = format_parquet\n)\nAS\nSELECT * FROM gold.Customers\n\n\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "azureprojectDB",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

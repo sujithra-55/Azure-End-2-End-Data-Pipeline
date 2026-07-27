@@ -1,0 +1,17 @@
+{
+	"name": "CREATE EXTERNAL DATA SOURCE",
+	"properties": {
+		"content": {
+			"query": "CREATE EXTERNAL DATA SOURCE source_gold\nWITH\n(\n    LOCATION = 'abfss://gold@datalakeazureproject.dfs.core.windows.net',\n    CREDENTIAL = cred_sujithra\n)",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "azureprojectDB",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"name": "CREATE EXTERNAL FILE FORMAT",
+	"properties": {
+		"content": {
+			"query": "CREATE EXTERNAL FILE FORMAT format_parquet\nWITH\n(\n    FORMAT_TYPE = PARQUET,\n    DATA_COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'\n)",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "azureprojectDB",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

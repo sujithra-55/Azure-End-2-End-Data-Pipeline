@@ -1,0 +1,17 @@
+{
+	"name": "CREATE SCHEMA",
+	"properties": {
+		"content": {
+			"query": "CREATE SCHEMA gold;",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "azureprojectDB",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
